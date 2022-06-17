@@ -1,0 +1,20 @@
+
+1- copy
+    ../esp-apple-homekit-adk/examples/Lightbulb/accessory_setup.bin
+     to 
+    ../esp-apple-homekit-adk/examples/Lightbulb/build dir
+
+--------------------------
+2 - modified /Users/luisesparragoza/esp/esp-apple-homekit-adk/examples/Lightbulb/build/flasher_args.json
+    ... added two lines
+
+"flash_files" : {
+        "0x340000" : "accessory_setup.bin"
+    },
+        "accessory_setup" : { "offset" : "0x340000", "file" : "accessory_setup.bin", "encrypted" : "false" },
+
+
+----------------------------
+3 - modified sdkconfig
+    CONFIG_EXAMPLE_WIFI_SSID="HouseWiFi"
+    CONFIG_EXAMPLE_WIFI_PASSWORD="HouseWiFi_PW"
