@@ -8,9 +8,9 @@ this board has a boot button connected to IO0 and a Blue LED connected to IO2
 
 # compile and flash
 if you want to skip 
-        $ idf.py menuconfig # Set Example Configuration -> WiFi SSID/Password
-        $ idf.py flash
-        $ esptool.py -p $ESPPORT write_flash 0x340000 accessory_setup.bin
+        idf.py menuconfig # Set Example Configuration -> WiFi SSID/Password
+        idf.py flash
+        esptool.py -p $ESPPORT write_flash 0x340000 accessory_setup.bin
         
 1- copy
     ../esp-apple-homekit-adk/examples/Lightbulb/accessory_setup.bin
